@@ -18,6 +18,7 @@ a {
 ul {
     list-style: none;
     padding: 0px;
+    margin: 0px;
 }
 
 section {
@@ -305,21 +306,34 @@ section {
 .ratings-cards {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-}
+    gap: 30px;}
 
 .rate {
     display: flex;
     flex-direction: column;
     gap: 15px;
     padding: 40px 30px;
+
+    max-width: 500px;
 }
 
 .photo {
     display: none;
+    position: absolute;
+
+    width: 72px;
+    height: 72px;
+    border-radius: 72px;
+    flex-shrink: 0;
+
+    left: -55px;
 }   
 
 @media (min-width: 820px) {
+    .photo {
+        display: block;
+    }   
+
     .ratings-cards {
         flex-direction: row;
         gap: 137px;
